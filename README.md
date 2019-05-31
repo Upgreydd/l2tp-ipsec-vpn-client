@@ -1,5 +1,7 @@
 bcit updates
 ===
+[![](https://images.microbadger.com/badges/image/bcit/l2tp-ipsec-vpn-client.svg)](https://microbadger.com/images/bcit/l2tp-ipsec-vpn-client) [![](https://images.microbadger.com/badges/version/bcit/l2tp-ipsec-vpn-client.svg)](https://microbadger.com/images/bcit/l2tp-ipsec-vpn-client) [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/bcit/l2tp-ipsec-vpn-client/blob/master/LICENSE)
+
 ```
 May 31 21:06:47: "L2TP-PSK": We cannot identify ourselves with either end of this connection.  [vpn addr] or 0.0.0.0 are not usable
 022 "L2TP-PSK": We cannot identify ourselves with either end of this connection.  [vpn addr] or 0.0.0.0 are not usable
@@ -8,8 +10,6 @@ added explicit left side to configuration (`VPN_CLIENT_IPV4` in run section belo
 
 l2tp-ipsec-vpn-client
 ===
-[![](https://images.microbadger.com/badges/image/bcit/l2tp-ipsec-vpn-client.svg)](https://microbadger.com/images/bcit/l2tp-ipsec-vpn-client) [![](https://images.microbadger.com/badges/version/bcit/l2tp-ipsec-vpn-client.svg)](https://microbadger.com/images/bcit/l2tp-ipsec-vpn-client) [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/bcit/l2tp-ipsec-vpn-client/blob/master/LICENSE)
-
 A tiny Alpine based docker image to quickly setup an L2TP over IPsec VPN client w/ PSK.
 
 ## Motivation
