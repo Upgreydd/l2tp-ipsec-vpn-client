@@ -4,7 +4,7 @@ bcit updates
 May 31 21:06:47: "L2TP-PSK": We cannot identify ourselves with either end of this connection.  [vpn addr] or 0.0.0.0 are not usable
 022 "L2TP-PSK": We cannot identify ourselves with either end of this connection.  [vpn addr] or 0.0.0.0 are not usable
 ```
-added explicit left side to configuration
+added explicit left side to configuration (`VPN_CLIENT_IPV4` in run section below)
 
 l2tp-ipsec-vpn-client
 ===
