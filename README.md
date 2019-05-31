@@ -1,3 +1,11 @@
+bcit updates
+===
+```
+May 31 21:06:47: "L2TP-PSK": We cannot identify ourselves with either end of this connection.  [vpn addr] or 0.0.0.0 are not usable
+022 "L2TP-PSK": We cannot identify ourselves with either end of this connection.  [vpn addr] or 0.0.0.0 are not usable
+```
+added explicit left side to configuration
+
 l2tp-ipsec-vpn-client
 ===
 [![](https://images.microbadger.com/badges/image/ubergarm/l2tp-ipsec-vpn-client.svg)](https://microbadger.com/images/ubergarm/l2tp-ipsec-vpn-client) [![](https://images.microbadger.com/badges/version/ubergarm/l2tp-ipsec-vpn-client.svg)](https://microbadger.com/images/ubergarm/l2tp-ipsec-vpn-client) [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/ubergarm/l2tp-ipsec-vpn-client/blob/master/LICENSE)
@@ -11,9 +19,10 @@ one thing a MAC can do better is quickly setup this kind of VPN? Then
 here is all you need:
 
 1. VPN Server Address
-2. Pre Shared Key
-3. Username
-4. Password
+2. Client Address
+3. Pre Shared Key
+4. Username
+5. Password
 
 ## Run
 Setup environment variables for your credentials and config:
@@ -28,6 +37,7 @@ Now run it (you can daemonize of course after debugging):
     docker run --rm -it --privileged --net=host \
                -v /lib/modules:/lib/modules:ro \
                -e VPN_SERVER_IPV4 \
+               -e VPN_CLIENT_IPV4=`ip -f inet addr show eth0 | grep -Po 'inet \K[\d.]+'` \
                -e VPN_PSK \
                -e VPN_USERNAME \
                -e VPN_PASSWORD \
